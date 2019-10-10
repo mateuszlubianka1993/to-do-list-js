@@ -50,28 +50,25 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body mx-3">
-                    <div class="md-form mb-5">
-                        <i class="fas fa-user prefix grey-text"></i>
-                        <input type="text" id="orangeForm-name" class="form-control validate">
-                        <label data-error="wrong" data-success="right" for="orangeForm-name">Your name</label>
-                    </div>
-                    <div class="md-form mb-5">
-                        <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="email" id="orangeForm-email" class="form-control validate">
-                        <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
-                    </div>
+                <form id="signup-form">
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input type="email" id="orangeForm-email" class="form-control validate signup-email">
+                            <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+                        </div>
 
-                    <div class="md-form mb-4">
-                        <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="password" id="orangeForm-pass" class="form-control validate">
-                        <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
-                    </div>
+                        <div class="md-form mb-4">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <input type="password" id="orangeForm-pass" class="form-control validate signup-password">
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+                        </div>
 
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-deep-orange">Sign up</button>
-                </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn btn-deep-orange" type="submit">Sign up</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -157,6 +154,8 @@
             authDomain: "to-do-list-js.firebaseapp.com",
             databaseURL: "https://to-do-list-js.firebaseio.com",
             projectId: "to-do-list-js",
+            storageBucket: "to-do-list-js.appspot.com",
+            messagingSenderId: "364108590395",
             appId: "1:364108590395:web:5ad49c07479913200d9b1e"
         };
         firebase.initializeApp(firebaseConfig);
@@ -167,6 +166,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+
+    <script src="./js/firebase.js"></script>
+
 </body>
 
 </html>

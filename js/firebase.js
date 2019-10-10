@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const logoutBtn = document.querySelector('.logout-btn');
     logoutBtn.addEventListener('click', logOut);
+
+    const signinForm = document.querySelector('#signin-form');
+    signinForm.addEventListener('submit', logInUser);
 });
 
 const addUser = (e) => {
@@ -25,5 +28,18 @@ const logOut = () => {
     auth.signOut().then(() => {
         console.log('logout');
         $('#log-out-modal').modal('hide');
+    })
+};
+
+const logInUser = (e) => {
+    e.preventDefault();
+
+    const mail = document.querySelector('.login-email').value;
+    const password = document.querySelector('.login-password').value;
+
+    auth.signInWithEmailAndPassword(mail, password).then(cred =>{
+        const signinForm = document.querySelector('#signin-form');
+        $('#modalLoginForm').modal('hide');
+        signinForm.reset();
     })
 };

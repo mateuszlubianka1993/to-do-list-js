@@ -112,13 +112,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Log out</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                        Are you sure you want to log out?
+                    Are you sure you want to log out?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -139,7 +139,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <input class="form-control" type="text" placeholder="Add new task">   
+                    <input class="form-control" type="text" placeholder="Add new task">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Add</button>
@@ -147,6 +147,22 @@
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyANI2HQhwJNXKV9VLQaxTHRCe9igH9FASQ",
+            authDomain: "to-do-list-js.firebaseapp.com",
+            databaseURL: "https://to-do-list-js.firebaseio.com",
+            projectId: "to-do-list-js",
+            appId: "1:364108590395:web:5ad49c07479913200d9b1e"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const database = firebase.firestore();
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>

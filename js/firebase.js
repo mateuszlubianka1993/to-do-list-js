@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            console.log('user logIn');
+        } else {
+            console.log('user logOut');
+        }
+    });
+
     const signupForm = document.querySelector('#signup-form');
     signupForm.addEventListener('submit', addUser);
 
@@ -17,7 +25,6 @@ const addUser = (e) => {
     const password = document.querySelector('.signup-password').value;
     
     auth.createUserWithEmailAndPassword(mail, password).then(cred => {
-        console.log(cred.user);
         const signupForm = document.querySelector('#signup-form');
         $('#modalRegisterForm').modal('hide');
         signupForm.reset();
@@ -26,7 +33,6 @@ const addUser = (e) => {
 
 const logOut = () => {
     auth.signOut().then(() => {
-        console.log('logout');
         $('#log-out-modal').modal('hide');
     })
 };

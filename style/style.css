@@ -11,6 +11,10 @@ body {
   background-color: #424B54;
 }
 
+body .logout-txt {
+  padding-top: 200px;
+}
+
 body #main-nav {
   background-color: #A71D31;
 }
@@ -57,6 +61,7 @@ body .task {
   color: #000;
   font-size: 26px;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
 body .task .task-header {
@@ -65,6 +70,31 @@ body .task .task-header {
 
 body .task .task-content {
   text-transform: uppercase;
+}
+
+@media (max-width: 580px) {
+  body .task {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  body .task-date {
+    display: none;
+  }
+  body .delete-all-btn {
+    display: none;
+  }
+  body .panel-btn {
+    max-width: 45%;
+    font-size: 14px;
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  body .task {
+    font-size: 14px;
+    padding: 5px;
+  }
 }
 
 body .btn {

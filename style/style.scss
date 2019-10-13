@@ -10,7 +10,9 @@ body {
     overflow: hidden;
     min-height: 100vh;
     background-color: $bgColor;
-
+    .logout-txt {
+        padding-top: 200px;
+    }
     #main-nav {
         background-color: $primaryColor;
     }
@@ -48,13 +50,39 @@ body {
         color: #000;
         font-size: 26px;
         margin-bottom: 15px;
+        overflow: hidden;
         .task-header {
             color: $primaryColor;
         }
         .task-content {
             text-transform: uppercase;
         }
+        
     }
+    @media (max-width: $mediumBreak) {
+        .task {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+        .task-date {
+            display: none;
+        }
+        .delete-all-btn {
+            display: none;
+        }
+        .panel-btn {
+            max-width: 45%;
+            font-size: 14px;
+            min-height: 70px;
+        }
+      }
+      @media (max-width: $smallBreak) {
+        .task {
+            font-size: 14px;
+            padding: 5px;
+        }
+        
+      }
     .btn {
         color: #F1F0CC;
     }
@@ -66,3 +94,4 @@ body {
     }
     
 }
+

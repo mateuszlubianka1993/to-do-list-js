@@ -21,7 +21,7 @@ const displayTasks = (items) => {
             
             taskHeader.innerHTML = `
                                     <h5 class="mb-2 h5">Task number: ${task.number}</h5>
-                                    <small>${task.date}</small>  
+                                    <small class="task-date">${task.date}</small>  
                                     `;
             taskContent.innerText = task.title;
             
@@ -37,7 +37,7 @@ const displayTasks = (items) => {
         })
     } else {
         tasksList.innerHTML = `
-                <h3 class="text-center">
+                <h3 class="text-center logout-txt">
                     There is nothing
                     <small class="text-muted">Log in and add new tasks.</small>
                 </h3>

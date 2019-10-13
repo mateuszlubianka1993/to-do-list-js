@@ -69,3 +69,8 @@ const addNewTask = (e) => {
         newTaskForm.reset();
     });
 };
+
+const deleteTask = (e) => {
+    taskId = e.target.parentElement.parentElement.getAttribute('data-id');
+    database.collection('tasks').doc(taskId).delete();
+};

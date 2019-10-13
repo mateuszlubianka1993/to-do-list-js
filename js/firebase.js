@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     auth.onAuthStateChanged(user => {
         if(user) {
-            database.collection('tasks').onSnapshot(snapshot => {
+            database.collection('tasks').where('user', '==', `${user.email}`).onSnapshot(snapshot => {
                 displayTasks(snapshot.docs);
                 navDisplay(user);
             });
@@ -67,10 +67,13 @@ const addNewTask = (e) => {
     e.preventDefault();
     const listLength = document.querySelectorAll('.task').length;
     const today = new Date().toLocaleString();
+    const user = document.querySelector('.user-name').innerHTML;
+
     database.collection('tasks').add({
         title: document.querySelector('.task-title-input').value,
         number: listLength + 1,
-        date: today
+        date: today,
+        user: user
     }).then(() => {
         const newTaskForm = document.querySelector('#new-task-form');
         $('#add-task-modal').modal('hide');

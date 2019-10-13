@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    database.collection('tasks').get().then(snapshot => {
+        displayTasks(snapshot.docs);
+    });
+
     auth.onAuthStateChanged(user => {
         if(user) {
             console.log('user logIn');

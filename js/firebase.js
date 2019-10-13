@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const signinForm = document.querySelector('#signin-form');
     signinForm.addEventListener('submit', logInUser);
+
+    const newTaskForm = document.querySelector('#new-task-form');
+    newTaskForm.addEventListener('submit', addNewTask);
 });
 
 const addUser = (e) => {
@@ -52,4 +55,16 @@ const logInUser = (e) => {
         $('#modalLoginForm').modal('hide');
         signinForm.reset();
     })
+};
+
+const addNewTask = (e) => {
+    e.preventDefault();
+
+    database.collection('tasks').add({
+        title: document.querySelector('.task-title-input').value
+    }).then(() => {
+        const newTaskForm = document.querySelector('#new-task-form');
+        $('#add-task-modal').modal('hide');
+        newTaskForm.reset();
+    });
 };

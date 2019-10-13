@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: #424B54;
+}
+
+body #main-nav {
+  background-color: #A71D31;
+}
+
+body .tasks-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .tasks-panel .buttons-container {
+  width: auto;
+  padding: 30px 0;
+}
+
+body .tasks-panel .buttons-container .add-btn {
+  background-color: #D5BF86;
+}
+
+body .task {
+  background-color: #F1F0CC;
+  color: #000;
+  font-size: 26px;
+}
+
+body .task .task-header {
+  color: #A71D31;
+}
+
+body .task .task-content {
+  text-transform: uppercase;
+}
+
+body .btn {
+  color: #F1F0CC;
+}
+
+body .delete-btn {
+  background-color: #A71D31;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,49 @@
+@import './veriables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: $bgColor;
+
+    #main-nav {
+        background-color: $primaryColor;
+    }
+
+    .tasks-panel {
+        display: flex;
+        align-content: center;
+
+        .buttons-container {
+            width: auto;
+            padding: 30px 0;
+
+            .add-btn {
+                background-color: $goodBtnColor;
+            }
+            
+        }
+    }
+    .task {
+        background-color: $taskColor;
+        color: #000;
+        font-size: 26px;
+        .task-header {
+            color: $primaryColor;
+        }
+        .task-content {
+            text-transform: uppercase;
+        }
+    }
+    .btn {
+        color: #F1F0CC;
+    }
+    .delete-btn {
+        background-color: $badBtnColor;
+    }
+}

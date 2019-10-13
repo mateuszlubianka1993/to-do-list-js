@@ -13,11 +13,11 @@ const displayTasks = (items) => {
     
             li.setAttribute('class', 'list-group-item list-group-item-action flex-column align-items-start task');
             li.setAttribute('data-id', item.id);
-            taskHeader.setAttribute('class', 'd-flex w-100 justify-content-between');
-            taskContent.setAttribute('class', 'mb-2');
+            taskHeader.setAttribute('class', 'd-flex w-100 justify-content-between task-header');
+            taskContent.setAttribute('class', 'mb-2 task-content');
             btn.innerText = 'Delete';
             btn.addEventListener('click', deleteTask);
-            btn.setAttribute('class', 'btn purple-gradient');
+            btn.setAttribute('class', 'btn delete-btn');
             
             taskHeader.innerHTML = `
                                     <h5 class="mb-2 h5">Task number: ${task.number}</h5>

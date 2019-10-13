@@ -21,7 +21,7 @@ const displayTasks = (items) => {
             
             taskHeader.innerHTML = `
                                     <h5 class="mb-2 h5">Task number: ${task.number}</h5>
-                                    <small>3 days ago</small>  
+                                    <small>${task.date}</small>  
                                     `;
             taskContent.innerText = task.title;
             

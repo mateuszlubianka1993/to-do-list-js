@@ -15,6 +15,26 @@ body #main-nav {
   background-color: #A71D31;
 }
 
+body .modal {
+  color: #F1F0CC;
+}
+
+body .modal .modal-content {
+  background-color: #424B54;
+}
+
+body .modal .modal-content .modal-header {
+  background-color: #A71D31;
+}
+
+body .modal .modal-content .modal-footer {
+  background-color: #424B54;
+}
+
+body .modal .modal-input {
+  color: #F1F0CC;
+}
+
 body .tasks-panel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,5 +73,9 @@ body .btn {
 
 body .delete-btn {
   background-color: #A71D31;
+}
+
+body .add-btn {
+  background-color: #D5BF86;
 }
 /*# sourceMappingURL=style.css.map */

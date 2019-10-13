@@ -14,7 +14,21 @@ body {
     #main-nav {
         background-color: $primaryColor;
     }
-
+    .modal {
+        color: $taskColor;
+        .modal-content {
+            background-color: $bgColor;
+            .modal-header {
+                background-color: $primaryColor;
+            }
+            .modal-footer {
+                background-color: $bgColor;
+            }
+        }
+        .modal-input {
+            color: $taskColor;
+        }
+    }
     .tasks-panel {
         display: flex;
         align-content: center;
@@ -46,6 +60,9 @@ body {
     }
     .delete-btn {
         background-color: $badBtnColor;
+    }
+    .add-btn {
+        background-color: $goodBtnColor;
     }
     
 }

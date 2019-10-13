@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const newTaskForm = document.querySelector('#new-task-form');
     newTaskForm.addEventListener('submit', addNewTask);
+
+    const deleteLastBtn = document.querySelector('.delete-last-btn');
+    deleteLastBtn.addEventListener('click', deleteLast);
 });
 
 const addUser = (e) => {
@@ -73,4 +76,10 @@ const addNewTask = (e) => {
 const deleteTask = (e) => {
     taskId = e.target.parentElement.parentElement.getAttribute('data-id');
     database.collection('tasks').doc(taskId).delete();
+};
+
+const deleteLast = () => {
+    const list = document.querySelectorAll('.task');
+    const lastTask = list[list.length - 1].getAttribute('data-id');
+    database.collection('tasks').doc(lastTask).delete();
 };

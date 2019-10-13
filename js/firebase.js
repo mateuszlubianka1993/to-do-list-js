@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const deleteLastBtn = document.querySelector('.delete-last-btn');
     deleteLastBtn.addEventListener('click', deleteLast);
+
+    const deleteAllBtn = document.querySelector('.delete-all-btn');
+    deleteAllBtn.addEventListener('click', deleteAll);
 });
 
 const addUser = (e) => {
@@ -82,4 +85,11 @@ const deleteLast = () => {
     const list = document.querySelectorAll('.task');
     const lastTask = list[list.length - 1].getAttribute('data-id');
     database.collection('tasks').doc(lastTask).delete();
+};
+
+const deleteAll = () => {
+    const list = document.querySelectorAll('.task');
+    list.forEach(el => {
+        database.collection('tasks').doc(el.getAttribute('data-id')).delete();
+    });
 };

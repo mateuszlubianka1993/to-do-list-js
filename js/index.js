@@ -14,13 +14,20 @@ const displayTasks = (items) => {
             const task = item.data();
     
             const li = document.createElement('div');
+            const taskHeader = document.createElement('div');
             const taskContent = document.createElement('p');
     
-            li.setAttribute('class', 'list-group-item list-group-item-action flex-column align-items-start');
+            li.setAttribute('class', 'list-group-item list-group-item-action flex-column align-items-start task');
+            taskHeader.setAttribute('class', 'd-flex w-100 justify-content-between');
             taskContent.setAttribute('class', 'mb-2');
-    
+            
+            taskHeader.innerHTML = `
+                                    <h5 class="mb-2 h5">Task number: ${task.number}</h5>
+                                    <small>3 days ago</small>  
+                                    `;
             taskContent.innerText = task.title;
-    
+            
+            li.appendChild(taskHeader);
             li.appendChild(taskContent);
     
             return listItem = li;

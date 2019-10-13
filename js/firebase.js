@@ -59,9 +59,10 @@ const logInUser = (e) => {
 
 const addNewTask = (e) => {
     e.preventDefault();
-
+    const listLength = document.querySelectorAll('.task').length;
     database.collection('tasks').add({
-        title: document.querySelector('.task-title-input').value
+        title: document.querySelector('.task-title-input').value,
+        number: listLength + 1
     }).then(() => {
         const newTaskForm = document.querySelector('#new-task-form');
         $('#add-task-modal').modal('hide');

@@ -1,4 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # To Do List
 > Hi everyone! This is my To Do List.
